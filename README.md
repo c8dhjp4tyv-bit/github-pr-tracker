@@ -60,7 +60,7 @@ This project integrates with the [GitHub REST API](https://docs.github.com/en/re
 3. `GET /repos/{owner}/{repo}/commits/{sha}/check-runs` and `GET /repos/{owner}/{repo}/commits/{sha}/status` inspect checks and legacy statuses.
 4. `GET /repos/{owner}/{repo}/pulls/{number}/reviews` summarizes submitted review decisions.
 
-**Notes:** The tool reads only data available to your token. It does not modify repositories, request reviews, or automatically poll in the background. GitHub API rate limits apply; without a token the public API has a much lower limit. Check-run results and reviews are read from the first 100 entries per endpoint; very large histories may be incomplete.
+**Notes:** The tool reads only data available to your token. It does not modify repositories, request reviews, or automatically poll in the background. GitHub API rate limits apply; without a token the public API has a much lower limit. Check-runs and legacy statuses are read from the first 100 entries per endpoint, while reviews are paginated up to 1,000 entries; unusually large histories may be incomplete.
 
 ## Development
 
