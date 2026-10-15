@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "github-pr-tracker"
+version = "0.1.0"
+description = "Track GitHub pull requests, CI checks, and reviews from the command line"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "c8dhjp4tyv-bit" }]
+dependencies = []
+keywords = ["github", "pull-requests", "ci", "cli", "github-api"]
+
+[project.scripts]
+github-pr-tracker = "github_pr_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
